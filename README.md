@@ -1,0 +1,20 @@
+# Baumer Camera Applicatie
+
+het doel van mijn project is om een cameracontrole te doen.
+ik wil dus de camera foto's laten maken, de laatst genomen foto moet op mijn gui verschijnen, er moet dan beeldverwering gebeuren. die beeldverwerking kan in alle vormen zijn, grijswaarden controleren, tekst lezen, objectherkenning, enzovoort.
+om mijn project te herkennen wil ik eerst allen werken om grijswaarden te meten.
+het doel is dus om na een trigger (nu via mijn software, later een hardware trigger) een foto te maken, die in de gui te laten verschijnen, en dan volgens het principe van inspection_points.py een controle te doen.
+nu is dat nog een apart script, maar dat wil ik integreren in mijn totaalproject.
+mijn hoofdpagina bestaat uit een frame voor de afbeeldingen in het midden, links commandoknoppen om naar andere vensters te gaan. nu is dat enkel het menu camerasettings, later zullen er daar nog bijkomen zoals bijvoorbeeld create checkpoints, enz....
+rechts staan nu enkele commandoknoppen van de live view maar die zullen op termijn vervangen worden door andere commando's.
+met het menu camera settings wil ik als volgt werken. Er is een default_settings.json waarin alle parameters op een default waarde staan. dit bestand mag niet overschreven worden. de bedoeling is dat ik voor de eerste keer een nieuwe settingsfile creeer. elke keer er een nieuwe settings file gemaakt word moet vertrokken worden van de default settings json, en als er aanpassingen gebeuren moet ik die in de gui kunnen saven in een nieuwe json file onder een naam die ik kan kiezen. er moeten ook bestaande json files kunnen bewerkt worden en verwijderd worden.
+om te beginnen wil ik dus eerst het programma opbouwen dat ik met checkpoints werk. dit moet een knop zijn die links naast het frame staat, onder de bestaande knoppen.
+"create checkpoints" zou de knop moeten noemen, als ik daar op druk moet er een nieuw venster opengaan op dezelfde manier als mijn hoofdpagina, in het midden een frame voor de afbeelding.
+met dit menu wil ik een referentie foto kunnen nemen, een filter kunnen instellen, een ROI kunnen maken om een grid lijn te zetten, en dan inspectie punten zetten op de afbeelding. die punten moet ik een naam geven, 
+verdere details voor dit menu moet ik nog uitwerken, maar dat is in grote lijnen wat dit menu moet doen. net hetzelfde als bij de camerasettings, moet ik een nieuwe file kunnen maken, een bestaande bewerken, een bestaande verwijderen, en de nieuwe of bewerkte kunnen opslaan. hoe die bewaard moet worden maakt mij niet uit, ofwel via een json of in de database.
+later zullen er dan nog andere menu's bijkomen zoals bijvoorbeeld objecherkenning, ocr controle, enz.... ook hier moet dan op hetzelfde principe gewerkt worden, een referentiefoto nemen, filter instellen als dat nodig is, en dan de acties kunnen opzetten voor dat specifieke doel.
+voor al die referentie's moeten de referentie instellingen bewaard worden zodat ik later een controle kan doen door in het programma de laatst genomen foto te vergelijken met de referentie.
+in mijn hoofdmenu wil ik dus links ook een menuknop, en als die opent wil ik een job kunnen maken. daarmee bedoel ik, ik geef een naam voor de job, ik kies de camerasettings, ik kies het type controle (grijswaarden, objectherkenning, ocr, enz) ik kies de referentie settings en dan moet ik die job kunnen bewaren.
+als ik dan mijn project start moet ik een job kunnen kiezen (deze selector moet rechts naast de afbeelding komen) er moet een connect knop komen om met de camera te verbinden en de camerasetingsfile die in die job zitten moeten naar de camera gestuurd worden, en daaronder komen dan de widgets die nodig zijn voor de gekozen soort cameracontrole.
+als ik dan op start druk moet de cameracontrole gebeuren, na een trigger word het laatst genomen beeld getoond in de gui, de beeldverwerking word gedaan ten opzichte van de referentie, en dan moet beslist worden of de genomen foto goed is of niet.
+er zullen uiteindelijk nog wel uitbreidingen bijkomen, zoals bijvoorbeeld meerdere camera's, meerdere I/O signalen, enz.... maar dat is in grote lijnen wat ik met het project wil doen.

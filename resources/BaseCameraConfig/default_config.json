@@ -1,0 +1,771 @@
+{
+  "categories": [
+    {
+      "name": "Root",
+      "features": [
+        {
+          "name": "DeviceControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "ImageFormatControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "AcquisitionControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "BoSequencerControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "DigitalIOControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "CounterAndTimerControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "EventControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "AnalogControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "LUTControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "TransportLayerControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "UserSetControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "ChunkDataControl",
+          "type": "Unknown"
+        },
+        {
+          "name": "ActionControl",
+          "type": "Unknown"
+        }
+      ]
+    },
+    {
+      "name": "DeviceControl",
+      "features": [
+        {
+          "name": "DeviceVendorName",
+          "type": "String"
+        },
+        {
+          "name": "DeviceModelName",
+          "type": "String"
+        },
+        {
+          "name": "DeviceManufacturerInfo",
+          "type": "String"
+        },
+        {
+          "name": "DeviceVersion",
+          "type": "String"
+        },
+        {
+          "name": "DeviceID",
+          "type": "String"
+        },
+        {
+          "name": "DeviceUserID",
+          "type": "String"
+        },
+        {
+          "name": "DeviceScanType",
+          "type": "Enumeration",
+          "entries": [
+            "Areascan",
+            "Linescan"
+          ]
+        },
+        {
+          "name": "DeviceSensorType",
+          "type": "Enumeration",
+          "entries": [
+            "CMOS",
+            "CCD"
+          ]
+        },
+        {
+          "name": "ReadOutTime",
+          "type": "Integer",
+          "min": 1,
+          "max": 1000,
+          "inc": 1
+        },
+        {
+          "name": "BoSpec0",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        }
+      ]
+    },
+    {
+      "name": "ImageFormatControl",
+      "features": [
+        {
+          "name": "SensorWidth",
+          "type": "Integer",
+          "min": 1,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "SensorHeight",
+          "type": "Integer",
+          "min": 1,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "WidthMax",
+          "type": "Integer",
+          "min": 1,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "HeightMax",
+          "type": "Integer",
+          "min": 1,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "OffsetX",
+          "type": "Integer",
+          "min": 0,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "OffsetY",
+          "type": "Integer",
+          "min": 0,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "Width",
+          "type": "Integer",
+          "min": 1,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "Height",
+          "type": "Integer",
+          "min": 1,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "PixelFormat",
+          "type": "Enumeration",
+          "entries": [
+            "Mono8",
+            "Mono12Packed",
+            "Mono12",
+            "Mono10Packed",
+            "Mono10",
+            "Mono16",
+            "BayerRG8",
+            "BayerRG12Packed",
+            "BayerRG16",
+            "RGB8",
+            "BGR8"
+          ]
+        },
+        {
+          "name": "BinningHorizontal",
+          "type": "Integer",
+          "min": 1,
+          "max": 16,
+          "inc": 1
+        },
+        {
+          "name": "BinningVertical",
+          "type": "Integer",
+          "min": 1,
+          "max": 16,
+          "inc": 1
+        },
+        {
+          "name": "TestImageSelector",
+          "type": "Enumeration",
+          "entries": [
+            "Off",
+            "SolidWhite",
+            "BlackImage",
+            "HorizontalRamp",
+            "VerticalRamp",
+            "Checkerboard"
+          ]
+        },
+        {
+          "name": "TestImageEnable",
+          "type": "Boolean"
+        }
+      ]
+    },
+    {
+      "name": "AcquisitionControl",
+      "features": [
+        {
+          "name": "AcquisitionMode",
+          "type": "Enumeration",
+          "entries": [
+            "Continuous"
+          ]
+        },
+        {
+          "name": "AcquisitionStart",
+          "type": "Command"
+        },
+        {
+          "name": "AcquisitionStop",
+          "type": "Command"
+        },
+        {
+          "name": "AcquisitionAbort",
+          "type": "Command"
+        },
+        {
+          "name": "TriggerSelector",
+          "type": "Enumeration",
+          "entries": [
+            "FrameStart",
+            "FrameEnd"
+          ]
+        },
+        {
+          "name": "TriggerMode",
+          "type": "Enumeration",
+          "entries": [
+            "Off",
+            "On"
+          ]
+        },
+        {
+          "name": "TriggerSource",
+          "type": "Enumeration",
+          "entries": [
+            "Off",
+            "Software",
+            "Line0",
+            "Action1",
+            "All"
+          ]
+        },
+        {
+          "name": "TriggerActivation",
+          "type": "Enumeration",
+          "entries": [
+            "RisingEdge",
+            "FallingEdge"
+          ]
+        },
+        {
+          "name": "TriggerDelay",
+          "type": "Float",
+          "min": 0.0,
+          "max": 10000.0
+        },
+        {
+          "name": "TriggerDelayAbs",
+          "type": "Float",
+          "min": 0.0,
+          "max": 10000.0
+        },
+        {
+          "name": "TriggerDelayRaw",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        },
+        {
+          "name": "ExposureTime",
+          "type": "Float",
+          "min": 4.0,
+          "max": 60000000.0
+        },
+        {
+          "name": "ExposureTimeAbs",
+          "type": "Float",
+          "min": 4.0,
+          "max": 60000000.0
+        },
+        {
+          "name": "ExposureTimeRaw",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        }
+      ]
+    },
+    {
+      "name": "BoSequencerControl",
+      "features": [
+        {
+          "name": "BoSequencerEnable",
+          "type": "Boolean"
+        },
+        {
+          "name": "BoSequencerRunOnce",
+          "type": "Boolean"
+        },
+        {
+          "name": "BoSequencerFreeRun",
+          "type": "Boolean"
+        },
+        {
+          "name": "BoSequencerStart",
+          "type": "Command"
+        },
+        {
+          "name": "BoSequencerStop",
+          "type": "Command"
+        },
+        {
+          "name": "BoSequencerSelector",
+          "type": "Integer",
+          "min": 0,
+          "max": 7,
+          "inc": 1
+        }
+      ]
+    },
+    {
+      "name": "DigitalIOControl",
+      "features": [
+        {
+          "name": "LineSelector",
+          "type": "Enumeration",
+          "entries": [
+            "Line0",
+            "Line1"
+          ]
+        },
+        {
+          "name": "LineMode",
+          "type": "Enumeration",
+          "entries": [
+            "Input",
+            "Output"
+          ]
+        },
+        {
+          "name": "LineInverter",
+          "type": "Boolean"
+        },
+        {
+          "name": "LineStatus",
+          "type": "Boolean"
+        },
+        {
+          "name": "LineStatusAll",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        },
+        {
+          "name": "LineSource",
+          "type": "Enumeration",
+          "entries": [
+            "Off",
+            "TriggerReady",
+            "AcquisitionActive",
+            "ExposureActive",
+            "AcquisitionTrigger",
+            "FrameTrigger",
+            "EventSelector",
+            "Streaming"
+          ]
+        },
+        {
+          "name": "LineDebouncerHighTime",
+          "type": "Float",
+          "min": 0.0,
+          "max": 1000000.0
+        },
+        {
+          "name": "LineDebouncerLowTime",
+          "type": "Float",
+          "min": 0.0,
+          "max": 1000000.0
+        },
+        {
+          "name": "Flash",
+          "type": "Enumeration",
+          "entries": [
+            "Off",
+            "On"
+          ]
+        },
+        {
+          "name": "FlashPolarity",
+          "type": "Enumeration",
+          "entries": [
+            "highActiv",
+            "lowActiv"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CounterAndTimerControl",
+      "features": [
+        {
+          "name": "FrameCounter",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        },
+        {
+          "name": "TimerSelector",
+          "type": "Enumeration",
+          "entries": [
+            "Timer1",
+            "Timer2",
+            "Timer3",
+            "Timer4"
+          ]
+        },
+        {
+          "name": "TimerDuration",
+          "type": "Float",
+          "min": 0.0,
+          "max": 1000000.0
+        },
+        {
+          "name": "TimerDelay",
+          "type": "Float",
+          "min": 0.0,
+          "max": 1000000.0
+        },
+        {
+          "name": "TimerTriggerSource",
+          "type": "Enumeration",
+          "entries": [
+            "Off",
+            "Software",
+            "Line0",
+            "Timer1",
+            "Timer2",
+            "Timer3",
+            "Timer4"
+          ]
+        },
+        {
+          "name": "TimerReset",
+          "type": "Command"
+        }
+      ]
+    },
+    {
+      "name": "EventControl",
+      "features": [
+        {
+          "name": "EventSelector",
+          "type": "Enumeration",
+          "entries": [
+            "ExposureStart",
+            "ExposureEnd",
+            "AcquisitionStart",
+            "AcquisitionEnd",
+            "FrameStart",
+            "FrameEnd",
+            "Line0RisingEdge",
+            "Line0FallingEdge"
+          ]
+        },
+        {
+          "name": "EventNotification",
+          "type": "Boolean"
+        },
+        {
+          "name": "LostEventCounter",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        },
+        {
+          "name": "DiscardedEventCounter",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        }
+      ]
+    },
+    {
+      "name": "AnalogControl",
+      "features": [
+        {
+          "name": "GainSelector",
+          "type": "Enumeration",
+          "entries": [
+            "All"
+          ]
+        },
+        {
+          "name": "Gain",
+          "type": "Float",
+          "min": 0.0,
+          "max": 24.0
+        },
+        {
+          "name": "GainRaw",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        },
+        {
+          "name": "GainAbs",
+          "type": "Float",
+          "min": 0.0,
+          "max": 24.0
+        },
+        {
+          "name": "GainFactor",
+          "type": "Float",
+          "min": 0.0,
+          "max": 100.0
+        },
+        {
+          "name": "BlackLevelSelector",
+          "type": "Enumeration",
+          "entries": [
+            "All"
+          ]
+        },
+        {
+          "name": "BlackLevel",
+          "type": "Integer",
+          "min": 0,
+          "max": 255,
+          "inc": 1
+        },
+        {
+          "name": "BlackLevelRaw",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        }
+      ]
+    },
+    {
+      "name": "LUTControl",
+      "features": [
+        {
+          "name": "LUTSelector",
+          "type": "Enumeration",
+          "entries": [
+            "LUT0",
+            "LUT1",
+            "LUT2",
+            "LUT3"
+          ]
+        },
+        {
+          "name": "LUTEnable",
+          "type": "Boolean"
+        },
+        {
+          "name": "LUTIndex",
+          "type": "Integer",
+          "min": 0,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "LUTValue",
+          "type": "Integer",
+          "min": 0,
+          "max": 65535,
+          "inc": 1
+        },
+        {
+          "name": "DefectPixelCorrection",
+          "type": "Boolean"
+        },
+        {
+          "name": "DefectPixelThreshold",
+          "type": "Integer",
+          "min": 0,
+          "max": 255,
+          "inc": 1
+        }
+      ]
+    },
+    {
+      "name": "TransportLayerControl",
+      "features": [
+        {
+          "name": "GevDeviceIPAddress",
+          "type": "String"
+        },
+        {
+          "name": "GevSubnetMask",
+          "type": "String"
+        },
+        {
+          "name": "GevDefaultGateway",
+          "type": "String"
+        },
+        {
+          "name": "GevInterfaceSelector",
+          "type": "Enumeration",
+          "entries": [
+            "Device"
+          ]
+        },
+        {
+          "name": "GevMACAddress",
+          "type": "String"
+        },
+        {
+          "name": "GevSCPSPacketSize",
+          "type": "Integer",
+          "min": 0,
+          "max": 9014,
+          "inc": 1
+        },
+        {
+          "name": "GevSCFTPSPacketTimeout",
+          "type": "Float",
+          "min": 0.0,
+          "max": 10.0
+        },
+        {
+          "name": "GevPersistentOption",
+          "type": "Enumeration",
+          "entries": [
+            "Off",
+            "On"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "UserSetControl",
+      "features": [
+        {
+          "name": "UserSetSelector",
+          "type": "Enumeration",
+          "entries": [
+            "Default",
+            "UserSet1",
+            "UserSet2",
+            "UserSet3",
+            "UserSet4"
+          ]
+        },
+        {
+          "name": "UserSetLoad",
+          "type": "Command"
+        },
+        {
+          "name": "UserSetSave",
+          "type": "Command"
+        },
+        {
+          "name": "UserSetDefaultSelector",
+          "type": "Enumeration",
+          "entries": [
+            "Default",
+            "UserSet1",
+            "UserSet2",
+            "UserSet3",
+            "UserSet4"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ChunkDataControl",
+      "features": [
+        {
+          "name": "ChunkModeActive",
+          "type": "Boolean"
+        },
+        {
+          "name": "ChunkSelector",
+          "type": "Enumeration",
+          "entries": [
+            "FrameCounter",
+            "Timestamp",
+            "LineStatusAll"
+          ]
+        },
+        {
+          "name": "ChunkEnable",
+          "type": "Boolean"
+        }
+      ]
+    },
+    {
+      "name": "ActionControl",
+      "features": [
+        {
+          "name": "ActionDeviceKey",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        },
+        {
+          "name": "ActionSelector",
+          "type": "Enumeration",
+          "entries": [
+            "Action1",
+            "Action2",
+            "Action3",
+            "Action4"
+          ]
+        },
+        {
+          "name": "ActionGroupMask",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        },
+        {
+          "name": "ActionGroupKey",
+          "type": "Integer",
+          "min": 0,
+          "max": 4294967295,
+          "inc": 1
+        }
+      ]
+    }
+  ],
+  "TriggerSource": "Software",
+  "AcquisitionStart": true,
+  "LineSelector": "Line0",
+  "LineMode": "Output"
+}
